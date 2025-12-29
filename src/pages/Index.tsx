@@ -60,37 +60,37 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center neon-glow">
+              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
                 <Icon name="Crosshair" size={24} className="text-white" />
               </div>
-              <h1 className="text-2xl font-heading font-bold neon-text">CS2 Arena</h1>
+              <h1 className="text-2xl font-heading font-bold">CS2 Arena</h1>
             </div>
             
             <nav className="hidden md:flex items-center gap-6">
-              <Button variant="ghost" className="hover-glow">
+              <Button variant="ghost">
                 <Icon name="Swords" size={18} className="mr-2" />
                 Матчи
               </Button>
-              <Button variant="ghost" className="hover-glow">
+              <Button variant="ghost">
                 <Icon name="Trophy" size={18} className="mr-2" />
                 Турниры
               </Button>
-              <Button variant="ghost" className="hover-glow">
+              <Button variant="ghost">
                 <Icon name="BarChart3" size={18} className="mr-2" />
                 Рейтинг
               </Button>
-              <Button variant="ghost" className="hover-glow">
+              <Button variant="ghost">
                 <Icon name="Users" size={18} className="mr-2" />
                 Команды
               </Button>
             </nav>
 
             <div className="flex items-center gap-3">
-              <div className="hidden sm:flex items-center gap-2 px-3 py-1 bg-primary/20 rounded-lg border border-primary/30">
-                <div className="w-2 h-2 bg-secondary rounded-full animate-pulse-glow"></div>
+              <div className="hidden sm:flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-lg border border-primary/30">
+                <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
                 <span className="text-sm font-medium">12,847 онлайн</span>
               </div>
-              <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 neon-glow">
+              <Button className="bg-primary hover:bg-primary/90">
                 <Icon name="User" size={18} className="mr-2" />
                 Профиль
               </Button>
@@ -100,31 +100,31 @@ const Index = () => {
       </header>
 
       <main className="container mx-auto px-4 py-8">
-        <section className="mb-12 relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 via-card to-accent/20 border border-primary/30 p-8 md:p-12">
+        <section className="mb-12 relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/10 via-card to-secondary/10 border border-border p-8 md:p-12">
           <div className="relative z-10 max-w-2xl">
-            <Badge className="mb-4 bg-secondary/20 text-secondary border-secondary/30 neon-glow">
+            <Badge className="mb-4 bg-primary/20 text-primary border-primary/40">
               <Icon name="Zap" size={14} className="mr-1" />
               Лучшая платформа для CS2
             </Badge>
-            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4 neon-text animate-slide-up">
+            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4">
               Играй на новом уровне
             </h2>
-            <p className="text-lg text-muted-foreground mb-6 animate-slide-up">
+            <p className="text-lg text-muted-foreground mb-6">
               Античит система, честный рейтинг, прямые трансляции и API для разработчиков. Присоединяйся к сообществу профессионалов!
             </p>
-            <div className="flex gap-4 animate-slide-up">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 neon-glow text-lg px-8">
+            <div className="flex gap-4">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
                 <Icon name="Play" size={20} className="mr-2" />
                 Начать играть
               </Button>
-              <Button size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10 hover-glow text-lg">
+              <Button size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10 text-lg">
                 <Icon name="Info" size={20} className="mr-2" />
                 Как это работает
               </Button>
             </div>
           </div>
-          <div className="absolute -right-20 -top-20 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse-glow"></div>
-          <div className="absolute -left-20 -bottom-20 w-96 h-96 bg-secondary/30 rounded-full blur-3xl animate-pulse-glow"></div>
+          <div className="absolute -right-20 -top-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+          <div className="absolute -left-20 -bottom-20 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"></div>
         </section>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
@@ -146,7 +146,7 @@ const Index = () => {
           <TabsContent value="matches" className="space-y-4">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-2xl font-heading font-bold">Активные матчи</h3>
-              <Button className="bg-gradient-to-r from-secondary to-primary hover:opacity-90 neon-glow">
+              <Button className="bg-primary hover:bg-primary/90">
                 <Icon name="Plus" size={18} className="mr-2" />
                 Создать матч
               </Button>
@@ -154,7 +154,7 @@ const Index = () => {
             
             <div className="grid gap-4">
               {mockMatches.map((match) => (
-                <Card key={match.id} className="bg-card/50 border-border/40 hover-glow p-6">
+                <Card key={match.id} className="bg-card/50 border-border/40 card-hover p-6">
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div className="flex items-center gap-4">
                       <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center border border-primary/30">
@@ -187,7 +187,7 @@ const Index = () => {
                       ) : (
                         <Badge variant="outline">Ожидание</Badge>
                       )}
-                      <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 neon-glow">
+                      <Button className="bg-primary hover:bg-primary/90">
                         <Icon name="LogIn" size={18} className="mr-2" />
                         Присоединиться
                       </Button>
@@ -272,7 +272,7 @@ const Index = () => {
                     </div>
                     <Progress value={65} className="h-2" />
                   </div>
-                  <Button className="w-full mt-4 bg-gradient-to-r from-primary to-accent hover:opacity-90 neon-glow">
+                  <Button className="w-full mt-4 bg-primary hover:bg-primary/90">
                     <Icon name="Settings" size={18} className="mr-2" />
                     Настройки
                   </Button>
@@ -379,7 +379,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center neon-glow">
+                <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
                   <Icon name="Crosshair" size={18} className="text-white" />
                 </div>
                 <h3 className="font-heading font-bold">CS2 Arena</h3>
